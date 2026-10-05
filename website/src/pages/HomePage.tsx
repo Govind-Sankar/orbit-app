@@ -36,29 +36,30 @@ export default function HomePage() {
   ];
 
   const handleDownload = () => {
-    const downloadUrl =
-      "https://github.com/Govind-Sankar/orbit-app/releases/latest/download/orbit.apk";
+    window.location.href = '/orbit.apk';
+    // const downloadUrl =
+    //   "https://github.com/Govind-Sankar/orbit-app/releases/latest/download/orbit.apk";
 
-    const fallbackUrl =
-      "https://github.com/Govind-Sankar/orbit-app/releases/latest";
+    // const fallbackUrl =
+    //   "https://github.com/Govind-Sankar/orbit-app/releases/latest";
 
-    let fallbackTriggered = false;
+    // let fallbackTriggered = false;
 
-    const fallbackTimer = window.setTimeout(() => {
-      fallbackTriggered = true;
-      window.location.href = fallbackUrl;
-    }, 5000);
+    // const fallbackTimer = window.setTimeout(() => {
+    //   fallbackTriggered = true;
+    //   window.location.href = fallbackUrl;
+    // }, 5000);
 
-    const handlePageHide = () => {
-      window.clearTimeout(fallbackTimer);
-      window.removeEventListener("pagehide", handlePageHide);
-    };
+    // const handlePageHide = () => {
+    //   window.clearTimeout(fallbackTimer);
+    //   window.removeEventListener("pagehide", handlePageHide);
+    // };
 
-    window.addEventListener("pagehide", handlePageHide);
+    // window.addEventListener("pagehide", handlePageHide);
 
-    window.location.href = downloadUrl;
+    // window.location.href = downloadUrl;
 
-    void fallbackTriggered;
+    // void fallbackTriggered;
   };
 
   return (
